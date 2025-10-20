@@ -1,1 +1,294 @@
 
+Vision and Scope Document
+for
+HiveSense
+Version 1.0 approved
+Prepared by Курінна Дар’я
+ПЗПІ-23-9
+ХНУРЕ
+15.10.2025
+
+
+Table of Contents
+
+Table of Contents	2
+Revision History	2
+1.	Business Requirements	1
+1.1	Background	1
+1.2	Business Opportunity	1
+1.3	Business Objectives and Success Criteria	1
+1.4	Customer or Market Needs	2
+1.5	Business Risks	2
+2.	Vision of the Solution	2
+2.1  Vision Statement	2
+2.2	Major Features	2
+2.3	Assumptions and Dependencies	3
+3.	Scope and Limitations	3
+3.1  Scope of Initial Release	3
+3.2  Scope of Subsequent Releases	5
+3.3	Limitations and Exclusions	5
+4.	Business Context	5
+4.1	Stakeholder Profiles	5
+4.2	Project Priorities	6
+4.3	Operating Environment	7
+
+
+
+
+
+Revision History
+
+
+Name
+Date
+Reason For Changes
+Version
+
+
+
+
+
+
+
+
+
+1. Business Requirements
+1.1   Background
+Сфера бджільництва та виробництва меду все більше потребує контролю якості, точного дотримання умов зберігання та простежуваності партій продукції. Невеликі та середні виробники меду часто ведуть облік вручну — у таблицях або на папері, що призводить до помилок, втрат продукції та неефективного управління запасами.
+Виникла потреба у створенні автоматизованої системи, яка б дозволяла в реальному часі контролювати залишки меду та умови його зберігання. Запропонована система — HiveSense — має забезпечити зручний моніторинг запасів, температури та вологості, своєчасне виявлення відхилень і підтримку стабільної якості меду.
+1.2   Business Opportunity
+На українському ринку існують окремі рішення для моніторингу температури, наприклад LoggerSoft від ПрАТ «ТЕРА» та системи Softron для контролю температури й вологості на складах. Вони забезпечують збір та відображення показників із датчиків, однак їхній функціонал обмежується лише контролем мікроклімату, без можливості обліку запасів, керування партіями продукції чи мобільного доступу.
+Система HiveSense усуває ці недоліки, поєднуючи моніторинг середовища з обліком партій меду, аналітикою запасів і сповіщеннями у реальному часі. На відміну від аналогів, HiveSense забезпечує централізовану роботу з єдиною базою даних, зручний веб- і мобільний інтерфейс та інтеграцію з IoT-датчиками різних типів.
+З економічної точки зору, система має потенціал монетизації через підпискову модель (subscription) або ліцензійні пакети для пасік, складів і фасувальних підприємств. Додаткові джерела прибутку можуть включати платні модулі аналітики, інтеграцію з ERP-системами чи обслуговування IoT-пристроїв.
+Таким чином, HiveSense створює нову нішу на ринку, пропонуючи комплексне рішення для пасік, медових складів та фасувальних підприємств, де важливі не лише показники температури, а й ефективне управління запасами.
+1.3   Business Objectives and Success Criteria
+<Describe the important business objectives of the product in a way that is quantitative and measurable. The value provided to customers is described in section 1.4, so this section should focus on the value provided to the business. This could include estimates of revenue or cost savings, return on investment analysis, or target release dates. Determine how success will be defined and measured on this project, and describe the factors that are likely to have the greatest impact on achieving that success. Include things within the direct control of the organization, as well as external factors. Establish measurable criteria to assess whether the business objectives have been met.>
+1.4   Customer or Market Needs
+<Describe the needs of typical customers or market segments, including needs that are not yet met by the marketplace or by existing systems. You may wish to describe problems customers currently encounter that the new product will (or will not) address and how the product would be used by customers. Identify the customer hardware and software environment in which the product must operate. Define at a high level any known critical interface or performance requirements. Avoid including any design or implementation details. Present the requirements in a numbered list so that more detailed user or functional requirements can be traced to them.>
+1.5  Business Risks
+<Summarize the major business risks associated with developing this product, such as marketplace competition, timing issues, user acceptance, implementation issues, or possible negative impacts on the business. Estimate the severity of the risks and identify any risk mitigation actions that could be taken.>
+2. Vision of the Solution
+2.1  Vision Statement
+Система HiveSense створюється для забезпечення ефективного, надійного та автоматизованого контролю за запасами меду та умовами його зберігання.
+ Метою рішення є надання пасічникам, складам і підприємствам із фасування меду єдиного цифрового інструменту, який дозволяє:
+• точно обліковувати партії продукції;
+
+• відстежувати температурно-вологісний режим у реальному часі;
+
+• оперативно реагувати на відхилення від допустимих норм;
+
+• мінімізувати втрати якості та кількості меду.
+У довгостроковій перспективі впровадження HiveSense сприятиме цифровізації бджільницької галузі України, підвищенню конкурентоспроможності виробників меду, зменшенню втрат через порушення умов зберігання та покращенню прозорості облікових процесів.
+ Світ із HiveSense — це середовище, де кожна партія меду зберігається в оптимальних умовах, а кожен виробник має повний контроль над якістю своєї продукції.
+2.2   Major Features
+Веб-інтерфейс є основним інструментом управління системою, через який здійснюється повний контроль даних та аналіз показників. Він призначений насамперед для адміністраторів, керівників складів і аналітиків.
+F-W1: Облік партій меду — створення, редагування та перегляд інформації про партії (сорт, кількість, дата, термін зберігання).
+F-W2: Керування користувачами — створення облікових записів, призначення ролей (адміністратор, оператор складу).
+F-W3: Моніторинг показників середовища — перегляд графіків температури та вологості у реальному часі в межах складу.
+F-W4: Управління IoT-пристроями — додавання, видалення або повторне підключення датчиків.
+F-W5: Моніторинг і аналітика — поєднаний модуль історії тривог, відхилень і базових графіків динаміки показників.
+F-W6: Формування звітів — створення та експорт звітів за обраний період.
+F-W7: Резервне копіювання — ручний або автоматичний бекап бази даних.
+Мобільний застосунок призначений для працівників складу або власника пасіки для щоденного моніторингу показників і швидкої реакції.
+F-M1: Авторизація користувача (оператор або керівник).
+F-M2: Перегляд поточних запасів і показників температури/вологості складу в реальному часі.
+F-M3: Отримання push-сповіщень про відхилення показників.
+F-M4: Коротка історія змін умов зберігання за останні 24 години.
+F-M5: Додавання/редагування базових даних про партію (кількість, сорт, дата приймання).
+F-M6: Коротке зведення про стан складу: кількість партій, середня температура, критичні події.
+Узагальнені функціональні характеристики системи (Web + Mobile):
+F-C1: Єдина база даних для зберігання інформації про партії та показники.
+F-C2: Синхронізація даних між веб- і мобільним додатком.
+F-C3: Безпечне зберігання інформації та авторизація користувачів.
+F-C4: Автоматичне отримання даних від IoT-датчиків у реальному часі.
+2.3   Assumptions and Dependencies
+<Record any assumptions that were made when conceiving the project and writing this vision and scope document. Note any major dependencies the project must rely upon for success, such as specific technologies, third-party vendors, development partners, or other business relationships.>
+3. Scope and Limitations
+3.1  Scope of Initial Release
+Основні функції, які будуть включені в початковий випуск продукту:
+
+F - 1: Реєстрація та авторизація користувачів — створення облікових записів для адміністратора та операторів складу, забезпечення безпечного входу до системи.
+F - 2: Облік партій меду — створення, редагування та перегляд даних про партії (сорт, кількість, дата надходження, термін придатності, місце зберігання).
+F - 3: Моніторинг температури та вологості — відображення показників у реальному часі, побудова базових графіків динаміки змін.
+F - 4: Система сповіщень — автоматичне інформування користувачів про відхилення від допустимих норм температури чи вологості.
+F - 5: Керування IoT-пристроями — підключення, відключення або повторне під’єднання датчиків для збору показників.
+F - 6: Формування звітів — створення звітів за період або партію, експорт у формат PDF.
+F - 7: Моніторинг і аналітика — перегляд історії подій і тривог, короткі статистичні індикатори (середня температура, середня вологість, кількість сповіщень).
+F - 8: Резервне копіювання даних — ручне або автоматичне створення копій бази даних.
+F - 9: Мобільний доступ — перегляд поточних запасів, показників та отримання push-сповіщень через мобільний застосунок.
+
+Переваги, які продукт повинен принести різним групам користувачів:
+
+Для власників пасік та керівників складів:
+UserAdv - 1: Контроль — можливість у будь-який момент переглянути залишки меду та стан зберігання.
+UserAdv - 2: Ефективність — зменшення часу на перевірку запасів і ручне введення даних.
+UserAdv - 3: Безпека — оперативне сповіщення про відхилення від норми, що дозволяє уникнути псування продукції.
+
+Для працівників складу:
+WorkerAdv - 1: Зручність — простий інтерфейс для внесення й перегляду інформації про партії.
+WorkerAdv - 2: Автоматизація — дані з датчиків надходять автоматично, без необхідності ручного контролю.
+WorkerAdv - 3: Оперативність — доступ до поточних показників через мобільний додаток.
+
+Для адміністраторів системи:
+AdminAdv - 1: Контроль користувачів — створення облікових записів, призначення ролей, керування пристроями.
+AdminAdv - 2: Аналіз даних — перегляд статистики і журналів подій.
+AdminAdv - 3: Надійність — створення резервних копій для запобігання втраті інформації.
+
+Якісні характеристики продукту:
+
+ProdFeat - 1: Інтуїтивний інтерфейс.
+Простий у користуванні, зрозумілий для всіх рівнів користувачів (від працівника складу до адміністратора).
+
+ProdFeat - 2: Безпека даних.
+Реалізація захищеної авторизації, шифрування з’єднання та обмеження доступу за ролями.
+
+ProdFeat - 3: Реальний час.
+Оновлення показників від датчиків не рідше ніж раз на 5 хвилин, синхронізація між веб- та мобільним інтерфейсами.
+
+ProdFeat - 4: Мобільність.
+Доступ до системи через мобільний додаток і веб-браузер, можливість переглядати дані з будь-якого пристрою.
+
+ProdFeat - 5: Надійність.
+Автоматичне резервне копіювання даних і стабільна робота системи навіть у разі короткочасних збоїв зв’язку.
+
+ProdFeat - 6: Масштабованість.
+Можливість подальшого розширення функціоналу (підтримка кількох складів, нові типи датчиків, розширена аналітика).
+3.2  Scope of Subsequent Releases
+F1: Додавання багатомовного інтерфейсу (українська, англійська) для розширення аудиторії користувачів.
+F2: Інтеграція з ERP-системами для автоматичного обміну даними про запаси.
+F3: Підтримка додаткових типів датчиків (вага, CO₂, освітленість, тиск).
+F4: Підтримка роботи з кількома складами одночасно.
+F5: Додаткові графічні дашборди з розширеними індикаторами якості.
+F6: Режим офлайн-роботи мобільного додатку з подальшою синхронізацією даних.
+F7: Автоматична ідентифікація партій — підтримка сканування штрихкодів або RFID-міток для швидкого пошуку й реєстрації партій.
+F8: Хмарне сховище документів якості — завантаження сертифікатів, протоколів лабораторних перевірок і документів із контролю партій.
+3.3   Limitations and Exclusions
+<Identify any product features or characteristics that a stakeholder might anticipate, but which are not planned to be included in the new product.>
+4. Business Context
+<This section summarizes some of the business issues around the project, including profiles of major customer categories, assumptions that went into the project concept, and the management priorities for the project.>
+4.1   Stakeholder Profiles
+<Stakeholders are individuals, groups, or organizations that are actively involved in a project, are affected by its outcome, or can influence its outcome. The stakeholder profiles identify the customers for this product and other stakeholders, and states their major interests in the product. Characterize business-level customers, target market segments, and different user classes, to reduce the likelihood of unexpected requirements surfacing later that cannot be accommodated because of schedule or scope constraints. For each stakeholder category, the profile includes the major value or benefits they will receive from the product, their likely attitudes toward the product, major features and characteristics of interest, and any known constraints that must be accommodated. Examples of stakeholder value include:
+
+● improved productivity
+● reduced rework
+● cost savings
+● streamlined business processes
+● automation of previously manual tasks
+● ability to perform entirely new tasks or functions
+● conformance to current standards or regulations
+● improved usability or reduced frustration level compared to current applications
+
+Example:>
+
+
+Stakeholder
+Major Value
+
+Attitudes
+
+Major Interests
+
+Constraints
+executives
+increased revenue
+see product as avenue to 25% increase in market share
+richer feature set than competitors; time to market
+maximum budget = $1.4M
+editors
+fewer errors in work
+highly receptive, but expect high usability
+automatic error correction; ease of use; high reliability
+must run on low-end workstations
+legal aides
+quick access to data
+resistant unless product is keystroke-compatible with current system
+ability to handle much larger database than current system; easy to learn
+no budget for retraining
+
+4.2   Project Priorities
+<Describe the priorities among the project’s requirements, schedule, and budget. The table below may be helpful in identifying the parameters around the project’s key drivers (top priority objectives), constraints to work within, and dimensions that can be balanced against each other to achieve the drivers within the known constraints. For more information, see chapter 2 of Creating a Software Engineering Culture by Karl E. Wiegers (Dorset House, 1996). Examples:>
+
+Dimension
+Driver
+(state objective)
+Constraint
+(state limits)
+Degree of Freedom
+(state allowable range)
+Schedule
+release 1.0 to be available by 10/1, release 1.1 by 12/1
+
+
+Features
+
+
+70-80% of high priority features must be included in release 1.0
+Quality
+
+
+90-95% of user acceptance tests must pass for release 1.0, 95-98% for release 1.1
+Staff
+
+maximum team size is 6 developers + 4 testers
+
+Cost
+
+
+budget overrun up to 15% acceptable without executive review
+
+4.3   Operating Environment
+Система HiveSense призначена для використання у межах одного складу, пасіки або невеликого виробничого приміщення, де здійснюється зберігання меду. Основне завдання системи — забезпечення безперервного контролю запасів і мікроклімату з подальшою передачею даних на сервер для обробки та аналізу.
+
+Середовище використання
+
+Система розгортається у стандартних умовах офісного або складського приміщення з постійним доступом до локальної мережі або Wi-Fi. Датчики температури та вологості встановлюються безпосередньо в зонах зберігання меду та передають дані через IoT-шлюз або безпосередньо до серверної частини.
+Користувачі (адміністратори та оператори складу) розташовані локально — у межах однієї локації. Веб-інтерфейс може бути доступним через локальну мережу або Інтернет, а мобільний застосунок — через мережу Wi-Fi чи мобільний зв’язок.
+
+Доступність і надійність
+
+Система має бути доступною протягом усього робочого часу складу або цілодобово у випадках, коли зберігання меду вимагає постійного моніторингу.
+
+• Доступність: не менше 99% часу роботи на рік.
+
+• Толерантність до збоїв: короткочасні відключення (до 10 хвилин) допускаються без втрати даних завдяки механізму локального кешування на сервері.
+
+• Відновлення: автоматичне відновлення зв’язку з датчиками після відновлення мережі.
+
+• Резервування: регулярне створення резервних копій бази даних і можливість ручного відновлення.
+
+Продуктивність
+
+Система обробляє показники з кількох датчиків у реальному часі.
+
+• Оновлення даних від датчиків — кожні 1–5 хвилин.
+
+• Час відгуку інтерфейсу — до 2 секунд при перегляді основних сторінок.
+
+• Обробка звіту — до 5 секунд для добового діапазону даних.
+
+• Мобільний застосунок синхронізує дані з сервером автоматично при підключенні до мережі.
+
+Цілісність і безпека даних
+
+• Передача даних між датчиками, сервером і клієнтськими додатками здійснюється через захищений протокол HTTPS.
+
+• Усі користувачі проходять авторизацію перед доступом до системи.
+
+• Доступ до адміністративних функцій обмежений роллю “адміністратор”.
+
+• Дані зберігаються у централізованій базі з регулярним резервним копіюванням.
+
+Організаційні умови
+
+• Користувачі системи (адміністратор і оператори складу) працюють у одному часовому поясі.
+
+• Доступ до системи можливий через браузер (Google Chrome, Firefox, Edge) або мобільний застосунок (Android 8.0+).
+
+• Дані генеруються і використовуються локально — у межах одного складу; інтеграція з іншими локаціями передбачена у майбутніх релізах.
+
+Система розробляється з використанням сучасного стеку технологій, що включає Node.js, React, PostgreSQL, Kotlin (Android) та IoT-датчики для збору й передачі даних у реальному часі.
+
+Vision and Scope for HiveSense		Page 2
+
+
+
